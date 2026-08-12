@@ -1,0 +1,76 @@
+<<<---DATA DEFINITION LANGUAGE (DDL)--->>>
+
+CREATE DATABASE baraero_may angel;
+
+CREATE TABLE Students (
+StudentID VARCHAR(50) PRIMARY KEY,
+LastName VARCHAR(50),
+FirstName VARCHAR(50),
+Course VARCHAR(50)
+);
+
+CREATE TABLE Section(
+SectionID VARCHAR(50) PRIMARY KEY,
+SectionName VARCHAR(50)
+);
+
+CREATE TABLE Subject(
+SubjectCode VARCHAR(50) PRIMARY KEY,
+SubjectName VARCHAR(50)
+);
+
+CREATE TABLE grade(
+StudentNo VARCHAR(50) PRIMARY KEY,
+SubjectCode VARCHAR(50),
+TotalGrade INT
+);
+
+CREATE TABLE StudentInformation(
+StudentNo VARCHAR(50) PRIMARY KEY,
+Address VARCHAR (50),
+Age INT
+);
+
+
+<<<---DATA MANIPULATION LANGUAGE (DML)--->>>
+
+INSERT INTO students(
+    StudentID, LastName, FirstName, Course)
+    Values
+    ('ST22100', 'Dela Cruz', 'Nathaniel', 'BSIS'),
+    ('ST22101', 'Santa Ana', 'Marvin', 'BSIS'),
+    ('ST22102', 'Dizon', 'Audrey', 'BSIS'),
+    ('ST22103', 'Besin', 'Daisy', 'ACT');
+
+INSERT INTO section(
+    SectionID, SectionName)
+    Values
+    ('SID1', '3B'),
+    ('SID2', '3D'),
+    ('SID3', '3F'),
+    ('SID4', '3A');
+
+INSERT INTO subject(
+    SubjectCode, SubjectName)
+    Values
+    ('CAP 301', 'Capstone Project 1'),
+    ('DSA 101', 'Data Structures and Alogarithms'),
+    ('COMPROG 201', 'Computer Programming 2'),
+    ('ITC 101', 'Introduction to Computing 1');
+
+INSERT INTO grade(
+    StudentNo, SubjectCode, TotalGrade)
+    Values
+    ('ST22100', 'CAP 301','1.9'),
+    ('ST22101', 'DSA 101','1.75'),
+    ('ST22102', 'COMPROG 201','1.8'),
+    ('ST22103', 'ITC','1.5');
+
+INSERT INTO studentinformation(
+    StudentNo, Address, Age)
+    Values
+    ('ST22100', 'Agdangan Baao Cam. Sur', '20'),
+    ('ST22101', 'Buluang Baao Cam. Sur', '19'),
+    ('ST22102', 'San Isidro Pili', '21'),
+    ('ST22103', 'Naga City', '22');
+   
